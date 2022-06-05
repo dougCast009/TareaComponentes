@@ -5,7 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './estudiantes.component.html',
   styleUrls: ['./estudiantes.component.css']
 })
+
 export class EstudiantesComponent implements OnInit {
+
   nombreEstudiante1 = "Douglas Castillo";
   cedulaEstudiante1 = 117190884;
   edadEstudiante1 = 23;
@@ -18,7 +20,9 @@ export class EstudiantesComponent implements OnInit {
   cedulaEstudiante3 = 123456789;
   edadEstudiante3 = 24;
 
-  estudiantes = {"Nombre" : "Douglas Castillo", "Cedula" : 117190884, "Edad" : 23};
+  setMensajeConfirmacion(){
+    alert("Se va a eliminar este registro")
+  }
 
   constructor() { }
 
