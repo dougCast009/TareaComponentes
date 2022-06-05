@@ -1,5 +1,40 @@
 <table class="table table-striped">
     <thead>
+        <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Agregar Estudiante
+    </button>
+  
+  <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Nuevo Estudiante</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="Nombre" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="Nombre" placeholder="Nombre Completo">
+                </div>
+                <div class="mb-3">
+                    <label for="Cedula" class="form-label">Cedula:</label>
+                    <input type="number" class="form-control" id="Cedula" placeholder="Numero de cedula">
+                </div>
+                <div class="mb-3">
+                    <label for="Edad" class="form-label">Edad:</label>
+                    <input type="number" class="form-control" id="Edad" placeholder="Edad">
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Agregar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+  
       <tr>
         <th scope="col">Id</th>
         <th scope="col">Nombre</th>
@@ -9,14 +44,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr ng-repeat="est in estudiantes">
         <th scope="row">1</th>
         <td>{{nombreEstudiante1}}</td>
         <td>{{cedulaEstudiante1}}</td>
         <td>{{edadEstudiante1}}</td>
-        <td>Eliminar</td>
+        <td><button class="btn btn-danger">Eliminar</button></td>
       </tr>
-      <tr>
+      <!-- <tr>
         <th scope="row">2</th>
         <td>{{nombreEstudiante2}}</td>
         <td>{{cedulaEstudiante2}}</td>
@@ -29,6 +64,6 @@
         <td>{{cedulaEstudiante3}}</td>
         <td>{{edadEstudiante3}}</td>
         <td>Eliminar</td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>

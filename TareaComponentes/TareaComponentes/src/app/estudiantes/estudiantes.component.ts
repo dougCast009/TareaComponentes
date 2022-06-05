@@ -18,7 +18,7 @@ export class EstudiantesComponent implements OnInit {
   cedulaEstudiante3 = 123456789;
   edadEstudiante3 = 24;
 
-  
+  estudiantes = {"Nombre" : "Douglas Castillo", "Cedula" : 117190884, "Edad" : 23};
 
   constructor() { }
 
